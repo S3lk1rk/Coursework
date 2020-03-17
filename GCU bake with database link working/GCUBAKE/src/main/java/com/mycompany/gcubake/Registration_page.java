@@ -223,7 +223,7 @@ this.setVisible(false);        // TODO add your handling code here:
   try
   {
   String query = "INSERT INTO customer (name, surname, post, phoneNum, Addr, username, password) VALUES (?,?,?,?,?,?,?)";
-  con = DriverManager.getConnection("jdbc:sqlite:C:/Users/Jonathan/Desktop/GCU bake with database link working/GCUBAKE/Databases/customer.db");
+  con = DriverManager.getConnection("jdbc:sqlite:customer.db");
   pst=con.prepareStatement(query);
   pst.setString(1, nameBox.getText());
   pst.setString(2, surnameBox.getText());
