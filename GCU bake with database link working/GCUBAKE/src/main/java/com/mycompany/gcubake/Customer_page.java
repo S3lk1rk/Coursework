@@ -40,12 +40,10 @@ public class Customer_page extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 500));
 
         pageLabel.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         pageLabel.setForeground(new java.awt.Color(0, 0, 51));
         pageLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        pageLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/s.jpg"))); // NOI18N
         pageLabel.setText("Customer Page");
         pageLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         pageLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -165,7 +163,7 @@ public class Customer_page extends javax.swing.JFrame {
     }//GEN-LAST:event_cancellessonsButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-new Staff_login().setVisible(true);
+new Customer_login().setVisible(true);
 this.setVisible(false);
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -5,9 +5,11 @@
  */
 package com.mycompany.gcubake;
 
+import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 /**
@@ -223,7 +225,7 @@ this.setVisible(false);        // TODO add your handling code here:
   try
   {
   String query = "INSERT INTO customer (name, surname, post, phoneNum, Addr, username, password) VALUES (?,?,?,?,?,?,?)";
-  con = DriverManager.getConnection("jdbc:sqlite:customer.db");
+  con = DriverManager.getConnection("jdbc:sqlite:C:/GCU bake with database link working/GCUBAKE/customer.db");
   pst=con.prepareStatement(query);
   pst.setString(1, nameBox.getText());
   pst.setString(2, surnameBox.getText());
@@ -237,9 +239,9 @@ this.setVisible(false);        // TODO add your handling code here:
   new Customer_login().setVisible(true);
   this.setVisible(false);
   }
-  catch(Exception ex)
+  catch(HeadlessException | SQLException e)
           {
-                JOptionPane.showMessageDialog(null, ex);
+                JOptionPane.showMessageDialog(null, e);
 
           }
       
